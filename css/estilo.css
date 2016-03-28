@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "Avenir Next Condensed";
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+
+
+/* Início */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #B43D25;
+	width: 100%;
+	height: 140px;
+	-webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    -ms-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+div.center{
+	max-width: 900px;
+	min-width: 575px;
+	padding: 10px;
+	height: calc(100% - 20px);/* CÁLCULO UTILIZADO PARA TIRAR OS 20px DO PADDING */
+	margin: auto;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+}
+
+header div.center{
+	padding: 0px;
+	height: 100%;
+}
+
+header div.center div#logo{
+	width: 250px;
+	background-image: url("../images/logotipo-lummy.png");
+	background-size: auto 85%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: left;
+	image-rendering: optimizeQuality;
+}
+
+
+header div.center div#container-dir{
+	flex-grow: 1;
+}
+
+header div.center div#container-dir div#telefones{
+	width: 100%;
+	height: 30px;
+	background-color: #FFF;
+	float: right;
+	border-bottom-left-radius: 10px;
+}
+
+header div.center div#container-dir div#telefones div#phone-number{
+	height: 100%;
+	float: right;
+	background-image: url("../images/phone-icon.png");
+	background-size: auto 80%;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	margin-right: 10px;
+	line-height: 28px;
+}
+
+header div.center div#container-dir div#telefones div#whats-number{
+	float: right;
+	height: 100%;
+	background-image: url("../images/whatsapp-icon.png");
+	background-size: auto 80%;
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin-right: 15px;
+	line-height: 28px;
+}
+
+header div.center div#container-dir div#menu{
+	float: right;
+	width: calc(100% - 10px);
+}
+
+header div.center div#container-dir div#menu nav{
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+}
+
+
+header div.center div#container-dir div#menu a{
+	line-height: 110px;
+	flex-grow: 1;
+	text-align: center;
+	display: block;
+	float: left;
+	color: #FFF;
+	-webkit-transition: line-height 0.2s;
+    -moz-transition: line-height 0.2s;
+    -ms-transition: line-height 0.2s;
+    -o-transition: line-height 0.2s;
+    transition: line-height 0.2s;
+}
+
+header div.center div#container-dir div#menu a:hover{
+	background-color: #FFF;
+	color: #B43D25;
+}
+
+/****** CHAMA QUADO DA SCROLL DA PÁGINA ******/
+header.smaller{
+	height: 90px;
+}
+header.smaller div.center div#container-dir div#menu nav a{
+	line-height: 60px;
+}
+/**********/
+
+section{
+	height: 550px;
+	background-color: gray;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+section#firstSection {
+	padding-top: 70px;
+	background-image: url("background1.png");
+}
+
+section#secondSection {
+	background-color: #BBB;
+}
+
+section#thirdSection {
+	background-color: #DDD;
+}
+
+footer{
+	height: 300px;
+	background-color: orange;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Ótica Lummy</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+<script src="js/classie.js"></script>
+<script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+    window.onload = init();
+</script>
+</head>
+<body>
+
+<header>
+	<div class="center">
+		<div id="logo">
+		</div>
+		
+		<div id="container-dir">
+			<div id="telefones">
+				<div id="phone-number"><p>(11) 4138-5942</p></div>
+				<div id="whats-number"><p>(11) 96093-3598</p></div>
+			</div>	
+				
+			<div id="menu">
+				<nav>
+					<a href="#">PRODUTOS</a>
+					<a href="#">MARCAS</a>
+					<a href="#">VENHA CONHECER</a>
+					<a href="#">SOBRE NÓS</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section id="firstSection">
+	<div class="center">
+	</div>
+</section>
+
+<section id="secondSection">
+	<div class="center">
+	</div>
+</section>
+
+<section id="thirdSection">
+	<div class="center">
+	</div>
+</section>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
