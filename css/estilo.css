@@ -165,7 +165,7 @@ header div.center div#container-dir div#menu a{
 	display: block;
 	float: left;
 	color: #DDD;
-	
+	outline: none;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;

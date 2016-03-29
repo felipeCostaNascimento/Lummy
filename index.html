@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/gallery.theme.css">
 <link rel="stylesheet" type="text/css" href="css/gallery.min.css">
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 </script>
@@ -29,6 +30,24 @@
         });
     }
     window.onload = init();
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              
+              if(this.hash == "#item-1" || this.hash == "#item-2" || this.hash == "#item-3"){
+              	return true;
+              }
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                  $('html,body').animate({
+                      scrollTop: target.offset().top - 80
+                  }, 1000);
+                  return false;
+              }
+          }
+      });
+    });
 </script>
 </head>
 <body>
@@ -46,7 +65,7 @@
 		<div id="container-dir">
 			<div id="menu">
 				<nav>
-					<a href="#firstSection">PRODUTOS</a>
+					<a href="#secondSection">PRODUTOS</a>
 					<a href="#thirdSection">MARCAS</a>
 					<a href="#">VENHA CONHECER</a>
 					<a href="#">SOBRE NÓS</a>
