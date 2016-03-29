@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: "Avenir Next Condensed";
+	font-family: "Myriad Pro";
 }
 ol, ul {
 	list-style: none;
@@ -189,6 +189,7 @@ section#firstSection {
 section#secondSection {
 	background-color: #FFF;
 	font-family: "LAO MN";
+	padding-bottom: 15px;
 }
 
 section#secondSection div.center{
@@ -301,7 +302,50 @@ section#secondSection div.center div#categoria3 div#lente-grau{
 /****** THIRD SECTION ******/
 section#thirdSection {
 	background-color: #DDD;
-	height: 550px;
+}
+
+section#thirdSection div.center{
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px;
+}
+
+section#thirdSection div.center div#title-desc{
+	width: 100%;
+	font-size: 20px;
+}
+
+section#thirdSection div.center div#title-desc h1{
+	font-family: "LAO MN";
+	font-size: 25px;
+}
+
+section#thirdSection div.center div.marcas{
+	width: 300px;
+	height: 190px;
+	background-color: #FFF;
+	margin-top: 20px;
+	font-family: "LAO MN";
+	font-size: 30px;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+section#thirdSection div.center div#mais-marcas{
+	background: none;
+}
+
+section#thirdSection div.center div.marcas img{
+	width: 100%;
+	height: auto;
 }
 
 footer{
