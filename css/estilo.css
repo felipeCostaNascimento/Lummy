@@ -188,6 +188,7 @@ section{
 section#firstSection {
 	margin-top: 140px;
 	height: 500px;
+	position: relative;
 }
 
 /****** SECOND SECTION ******/
