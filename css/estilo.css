@@ -102,6 +102,10 @@ header div.center div#container-dir div#telefones{
 	background-color: #FFF;
 	float: right;
 	border-bottom-left-radius: 10px;
+	
+}
+
+header div.center div#container-dir div#telefones p{
 	color: #000;
 }
 
@@ -172,7 +176,7 @@ header.smaller div.center div#container-dir div#menu nav a{
 /**********/
 
 section{
-	
+	width: 100%;
 	background-color: gray;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
