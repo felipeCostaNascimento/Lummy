@@ -127,6 +127,12 @@ article#telefones:hover{
     filter: alpha(opacity=100);
 }
 
+article#telefones:focus{
+	right: -3px;
+	opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 article#telefones p{
 	color: #000;
 }
