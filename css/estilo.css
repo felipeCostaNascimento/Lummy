@@ -96,6 +96,12 @@ header div.center div#container-dir{
 	flex-grow: 1;
 }
 
+
+@keyframes phone-animation{
+	from{ right: -135px; }
+	to{ right: 0px; }
+}
+
 article#telefones{
 	right: -135px;
 	top: 50%;
@@ -105,13 +111,20 @@ article#telefones{
 	float: right;
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
+	border: 1px solid #000;
+	transition-property: right;
+	transition-duration: 0.5s;
+}
+
+article#telefones:hover{
+	right: -1px;
 }
 
 article#telefones p{
 	color: #000;
 }
 
-article#telefones a div#phone-number{
+article#telefones div#phone-number{
 	background-image: url("../images/phone-icon.png");
 	background-size: auto 80%;
 	background-position: left center;
@@ -120,17 +133,13 @@ article#telefones a div#phone-number{
 	line-height: 35px;
 }
 
-article#telefones a div#whats-number{
+article#telefones div#whats-number{
 	background-image: url("../images/whatsapp-icon.png");
 	background-size: auto 80%;
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding-left: 35px;
 	line-height: 35px;
-}
-
-article#telefones a:hover{
-	
 }
 
 
@@ -172,10 +181,10 @@ header div.center div#container-dir div#menu a:hover{
 
 /****** CHAMA QUADO DA SCROLL DA PÁGINA ******/
 header.smaller{
-	height: 90px;
+	height: 80px;
 }
 header.smaller div.center div#container-dir div#menu nav a{
-	line-height: 58px;
+	line-height: 78px;
 }
 
 /**********/
