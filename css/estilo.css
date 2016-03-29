@@ -181,18 +181,13 @@ header.smaller div.center div#container-dir div#menu nav a{
 section{
 	width: 100%;
 	background-color: gray;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: center center;
 	float: left;
 }
 
 /****** FIRST SECTION ******/
 section#firstSection {
-	padding-top: 70px;
-	background-image: url("../images/banner3.jpg");
-	background-position: center bottom;
-	height: 550px;
+	margin-top: 140px;
+	height: 500px;
 }
 
 /****** SECOND SECTION ******/
