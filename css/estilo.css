@@ -70,7 +70,7 @@ header{
 
 div.center{
 	max-width: 1000px;
-	min-width: 600px;
+	min-width: 610px;
 	height: 100%;
 	margin: auto;
 	display: -webkit-box;
@@ -82,7 +82,7 @@ div.center{
 
 
 header div.center div#logo{
-	width: 250px;
+	width: 240px;
 	background-image: url("../images/logotipo-lummy.png");
 	background-size: auto 85%;
 	background-position: center center;
