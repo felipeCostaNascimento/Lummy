@@ -190,7 +190,8 @@ section{
 /****** FIRST SECTION ******/
 section#firstSection {
 	padding-top: 70px;
-	background-image: url("background1.png");
+	background-image: url("../images/banner3.jpg");
+	background-position: center bottom;
 	height: 550px;
 }
 
