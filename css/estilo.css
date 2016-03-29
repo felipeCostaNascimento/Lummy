@@ -181,6 +181,7 @@ section{
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center center;
+	float: left;
 }
 
 /****** FIRST SECTION ******/
