@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: "Myriad Pro";
+	font-family: "TrebuchetMS";
 }
 ol, ul {
 	list-style: none;
@@ -82,9 +82,10 @@ div.center{
 
 
 header div.center div#logo{
-	width: 240px;
+	width: 220px;
+	margin: 10px;
 	background-image: url("../images/logotipo-lummy.png");
-	background-size: auto 85%;
+	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat;
 	float: left;
@@ -173,6 +174,7 @@ header.smaller{
 header.smaller div.center div#container-dir div#menu nav a{
 	line-height: 60px;
 }
+
 /**********/
 
 section{
