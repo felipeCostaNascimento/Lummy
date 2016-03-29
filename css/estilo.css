@@ -97,12 +97,12 @@ header div.center div#container-dir{
 }
 
 header div.center div#container-dir div#telefones{
-	width: 100%;
+	padding: 0px 20px 0px 20px;
 	height: 30px;
 	background-color: #FFF;
 	float: right;
 	border-bottom-left-radius: 10px;
-	
+	border-bottom-right-radius: 10px;
 }
 
 header div.center div#container-dir div#telefones p{
@@ -116,8 +116,7 @@ header div.center div#container-dir div#telefones div#phone-number{
 	background-size: auto 80%;
 	background-position: left center;
 	background-repeat: no-repeat;
-	padding-left: 25px;
-	margin-right: 10px;
+	padding-left: 20px;
 	line-height: 28px;
 }
 
@@ -128,7 +127,7 @@ header div.center div#container-dir div#telefones div#whats-number{
 	background-size: auto 80%;
 	background-position: left center;
 	background-repeat: no-repeat;
-	padding-left: 30px;
+	padding-left: 25px;
 	margin-right: 15px;
 	line-height: 28px;
 }
@@ -136,6 +135,7 @@ header div.center div#container-dir div#telefones div#whats-number{
 header div.center div#container-dir div#menu{
 	float: right;
 	width: calc(100% - 10px);
+	margin-bottom: 2px;
 }
 
 header div.center div#container-dir div#menu nav{
@@ -148,22 +148,24 @@ header div.center div#container-dir div#menu nav{
 
 
 header div.center div#container-dir div#menu a{
-	line-height: 110px;
+	line-height: 108px;
 	flex-grow: 1;
 	text-align: center;
 	display: block;
 	float: left;
-	color: #FFF;
-	-webkit-transition: line-height 0.2s;
-    -moz-transition: line-height 0.2s;
-    -ms-transition: line-height 0.2s;
-    -o-transition: line-height 0.2s;
-    transition: line-height 0.2s;
+	color: #DDD;
+	
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 header div.center div#container-dir div#menu a:hover{
-	background-color: #FFF;
-	color: #B43D25;
+	color: #FFF;
+	border-bottom: 2px solid #FFF;
+	
 }
 
 /****** CHAMA QUADO DA SCROLL DA PÁGINA ******/
@@ -171,7 +173,7 @@ header.smaller{
 	height: 90px;
 }
 header.smaller div.center div#container-dir div#menu nav a{
-	line-height: 60px;
+	line-height: 58px;
 }
 
 /**********/
