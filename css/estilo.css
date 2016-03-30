@@ -127,11 +127,6 @@ article#telefones:hover{
     filter: alpha(opacity=100);
 }
 
-article#telefones:focus{
-	right: -3px;
-	opacity: 1;
-    filter: alpha(opacity=100);
-}
 
 article#telefones p{
 	color: #000;
@@ -247,21 +242,19 @@ section#secondSection div.center div#categorias p{
 }
 
 section#secondSection div.center div.produtos{
-	width: 450px;
+	width: 400px;
 	height: 300px;
 	background-size: 80% auto;
 	background-position: center center;
 	background-repeat: no-repeat;
-	
 }
 
 section#secondSection div.center div.produtos div.desc-produto{
 	float: left;
-	padding: 10px 20px 10px 20px;
-	background-color: #000;
-	color: #FFF;
-	border-radius: 20px;
+	font-weight: bold;
+	color: #000;
 	position: absolute;
+	font-size: 18px;
 }
 
 section#secondSection div.center div#categoria1{
@@ -270,25 +263,26 @@ section#secondSection div.center div#categoria1{
 }
 
 section#secondSection div.center div#categoria1 div#oculos-grau{
-	top: 240px;
-	left: 70px;
+	top: 245px;
+	left: 58px;
 }
 
 section#secondSection div.center div#categoria1 div#oculos-sol{
-	top: 150px;
-	left: 278px;
+	top: 165px;
+	left: 258px;
 }
 
 section#secondSection div.center div#categoria2{
 	background-image: url("../images/img-categoria2.png");
-	background-size: 69% auto;
 	position: relative;
 
 }
 
 section#secondSection div.center div#categoria2 div#lente-colorida{
-	top: 260px;
-	left: 68px;
+	width: 100%;
+	top: 265px;
+	left: 0px;
+	text-align: center;
 }
 
 section#secondSection div.center div#texto-produtos{
@@ -302,9 +296,7 @@ section#secondSection div.center div#texto-produtos{
 	align-content: center;
 	flex-direction: column;
 	font-size: 25px;
-	padding: 10px;
 	height: 200px;
-	width: 430px;
 	text-align: center;
 }
 
@@ -326,8 +318,10 @@ section#secondSection div.center div#categoria3{
 }
 
 section#secondSection div.center div#categoria3 div#lente-grau{
-	top: 260px;
-	left: 69px;
+	width: 100%;
+	top: 265px;
+	left: 0px;
+	text-align: center;
 }
 
 /****** THIRD SECTION ******/
