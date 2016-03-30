@@ -409,9 +409,8 @@ section#fourthSection div#maps{
 	width: 100%;
 }
 
-section#fourthSection div#maps iframe{
-	pointer-events: visible;
-}
+
+/****** FIFTH SECTION ******/
 
 section#fifthSection{
 	background-color: #FFF;
@@ -422,10 +421,13 @@ section#fifthSection div.center{
 	max-width: 600px;
 	text-align: justify;
 	line-height: 35px;
+	padding: 15px;
 }
 
 footer{
+	width: 100%;
 	height: 300px;
 	background-color: orange;
+	float: left;
 }
 
