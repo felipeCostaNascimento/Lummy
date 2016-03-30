@@ -232,6 +232,7 @@ section#secondSection div.center div#categorias{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
+  	flex-flow: row wrap;
 }
 
 section#secondSection div.center div#categorias p{
