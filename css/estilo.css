@@ -204,6 +204,17 @@ section{
 	float: left;
 }
 
+section div.center div.title-desc{
+	width: 100%;
+	font-size: 20px;
+}
+
+section div.center div.title-desc h1{
+	font-family: "LAO";
+	font-size: 25px;
+}
+
+
 /****** FIRST SECTION ******/
 section#firstSection {
 	padding-top: 110px;
@@ -342,16 +353,6 @@ section#thirdSection div.center{
 	padding: 15px;
 }
 
-section#thirdSection div.center div#title-desc{
-	width: 100%;
-	font-size: 20px;
-}
-
-section#thirdSection div.center div#title-desc h1{
-	font-family: "LAO";
-	font-size: 25px;
-}
-
 section#thirdSection div.center div.marcas{
 	width: 300px;
 	height: 190px;
@@ -379,8 +380,48 @@ section#thirdSection div.center div.marcas img{
 	height: auto;
 }
 
+
+/****** FOURTH SECTION ******/
+
 section#fourthSection{
 	background-color: #FFF;
+	padding-top: 20px;
+}
+
+section#fourthSection div.center{
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+section#fourthSection div.center div#exame-gratis{
+	float: left;
+	background: #7BAA22;
+	padding: 10px 5px 10px 5px;
+	color: #FFF;
+}
+
+section#fourthSection div.center div#exame-gratis span{
+	font-weight: bold;
+}
+
+section#fourthSection div#maps{
+	width: 100%;
+}
+
+section#fourthSection div#maps iframe{
+	pointer-events: visible;
+}
+
+section#fifthSection{
+	background-color: #FFF;
+	padding: 20px 0px 20px 0px;
+}
+
+section#fifthSection div.center{
+	max-width: 600px;
+	text-align: justify;
+	line-height: 35px;
 }
 
 footer{
