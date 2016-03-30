@@ -244,8 +244,7 @@ section#secondSection div.center div#categorias p{
 }
 
 section#secondSection div.center div.produtos{
-	width: 45%;
-	min-width: 320px;
+	width: 400px;
 	height: 300px;
 	background-size: 80% auto;
 	background-position: center center;
@@ -274,7 +273,7 @@ section#secondSection div.center div#categoria1 div#oculos-grau{
 
 section#secondSection div.center div#categoria1 div#oculos-sol{
 	top: 165px;
-	right: 2%;
+	right: 20px;
 }
 
 section#secondSection div.center div#categoria2{
