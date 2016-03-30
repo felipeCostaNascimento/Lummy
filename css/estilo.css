@@ -215,7 +215,7 @@ section#firstSection {
 section#secondSection {
 	background-color: #FFF;
 	font-family: "LAO";
-	padding-bottom: 15px;
+	padding: 20px 0px 20px 0px;
 }
 
 section#secondSection div.center{
@@ -233,17 +233,19 @@ section#secondSection div.center div#categorias{
   	display: -webkit-flex;
   	display: flex;
   	flex-flow: row wrap;
+
 }
 
 section#secondSection div.center div#categorias p{
 	flex-grow: 1;
 	text-align: center;
-	padding: 20px 10px 20px 10px;
 	font-size: 25px;
+	padding-bottom: 10px;
 }
 
 section#secondSection div.center div.produtos{
-	width: 400px;
+	width: 45%;
+	min-width: 320px;
 	height: 300px;
 	background-size: 80% auto;
 	background-position: center center;
@@ -256,6 +258,8 @@ section#secondSection div.center div.produtos div.desc-produto{
 	color: #000;
 	position: absolute;
 	font-size: 18px;
+	background-color: #FFF;
+	padding: 5px 0px 5px 0px;
 }
 
 section#secondSection div.center div#categoria1{
@@ -265,12 +269,12 @@ section#secondSection div.center div#categoria1{
 
 section#secondSection div.center div#categoria1 div#oculos-grau{
 	top: 245px;
-	left: 58px;
+	right: 210px;
 }
 
 section#secondSection div.center div#categoria1 div#oculos-sol{
 	top: 165px;
-	left: 258px;
+	right: 2%;
 }
 
 section#secondSection div.center div#categoria2{
