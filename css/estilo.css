@@ -430,6 +430,15 @@ section#fifthSection div.center h1{
 
 
 
+section#redes-socias{
+	width: 100%;
+	background-color: #555;
+}
+
+section#redes-socias div#center div.fb-like{
+	width: 100%;
+	padding: 10px;
+}
 
 
 footer{
@@ -441,11 +450,6 @@ footer{
 
 footer div.center{
 	
-}
-
-footer div.center div.fb-like{
-	flex-grow: 1;
-
 }
 
 footer div.center div#copyright{
