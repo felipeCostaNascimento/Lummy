@@ -439,6 +439,8 @@ section#redes-sociais div.center{
 	padding: 10px;
 	max-width: 600px;
 	text-align: center;
+	align-content: center;
+	justify-content: center;
 }
 
 section#redes-sociais div.center div.fb-like{
