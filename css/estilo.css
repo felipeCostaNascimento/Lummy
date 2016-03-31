@@ -459,7 +459,7 @@ footer div.center div#copyright{
 }
 
 footer div.center div#dev-text{
-	width: 130px;
+	min-width: 130px;
 }
 
 footer div.center div#dev-text div#dev-logo{
