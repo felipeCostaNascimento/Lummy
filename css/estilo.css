@@ -441,6 +441,7 @@ section#redes-sociais div.center{
 	text-align: center;
 	align-content: center;
 	justify-content: center;
+	flex-flow: row wrap;
 }
 
 section#redes-sociais div.center div.fb-like{
@@ -463,6 +464,12 @@ footer div.center{
 footer div.center div#copyright{
 	text-align: center;
 	flex-grow: 1;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+	align-items: flex-end;
 }
 
 footer div.center div#dev-text{
@@ -480,5 +487,6 @@ footer div.center div#dev-text div#dev-logo{
 
 footer div.center p{
 	color: #FFF;
+
 }
 
