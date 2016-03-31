@@ -437,7 +437,12 @@ section#redes-sociais{
 
 section#redes-sociais div.center{
 	padding: 10px;
-	width: calc(100% - 20);
+	max-width: 600px;
+	text-align: center;
+}
+
+section#redes-sociais div.center div.fb-like{
+	margin-left: 10px;
 }
 
 
