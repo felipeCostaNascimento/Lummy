@@ -48,6 +48,22 @@
           }
       });
     });
+
+    var imagesBanner = ["images/img-banner5.jpg", "images/img-banner4.jpg", "images/img-banner3.jpg"];
+    var currentImage = 0;
+    function rotateBanner(){
+    	currentImage = (currentImage + 1) % imagesBanner.length;
+    	
+
+    	$( ".gallery" ).animate({
+		    'background-position-x': '-100%',
+		}, 500, function() {
+    	$('.gallery').css('background-image', 'url('+imagesBanner[currentImage]+')');
+  	});
+    	
+    }
+
+    //setInterval(rotateBanner, 2500);
     
 </script>
 </head>
@@ -86,28 +102,11 @@
 </header>
 
 <section id="firstSection">
-	<div class="gallery items-3">
-	  <div id="item-1" class="control-operator"></div>
-	  <div id="item-2" class="control-operator"></div>
-	  <div id="item-3" class="control-operator"></div>
-
-	  <figure class="item" id="img-banner1">
-	    
-	  </figure>
-
-	  <figure class="item" id="img-banner2">
-	    
-	  </figure>
-
-	  <figure class="item" id="img-banner3">
-	    
-	  </figure>
-
-	  <div class="controls">
-	    <a href="#item-1" class="control-button">•</a>
-	    <a href="#item-2" class="control-button">•</a>
-	    <a href="#item-3" class="control-button">•</a>
-	  </div>
+	<div class="gallery" id="banner1">
+	</div>
+	<div class="gallery" id="banner2">
+	</div>
+	<div class="gallery" id="banner3">
 	</div>
 </section>
 
@@ -123,7 +122,7 @@
 		</div>
 		<div id="texto-produtos" class="produtos">
 			<p>Conheça todos os nossos produtos e preços nos fazendo uma visita.</p>
-			<a href="#">VENHA CONHECER</a>
+			<a href="#fourthSection">VENHA CONHECER</a>
 		</div>
 		<div id="categoria3" class="produtos">
 			<!--<div id="lente-grau" class="desc-produto">LENTES DE CONTATO COM GRAU</div>-->
@@ -191,7 +190,7 @@
 		<div id="copyright"><p>Todos os direitos reservados - Óticas Lummy 2016.</p></div>
 		<div id="dev-text">
 			<p>desenvolvido por</p>
-			<div id="dev-logo"></div>
+			<a href="#"><div id="dev-logo"></div></a>
 		</div>
 		
 	</div>

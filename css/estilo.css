@@ -394,10 +394,14 @@ section#fourthSection div.center{
 	align-items: center;
 }
 
+section#fourthSection div.center div.title-desc h1{
+	padding: 0px 15px 0px 15px;
+}
+
 section#fourthSection div.center div#exame-gratis{
 	float: left;
 	background: #7BAA22;
-	padding: 10px 5px 10px 5px;
+	padding: 10px 15px 10px 15px;
 	color: #FFF;
 }
 
@@ -476,13 +480,20 @@ footer div.center div#dev-text{
 	min-width: 130px;
 }
 
-footer div.center div#dev-text div#dev-logo{
+footer div.center div#dev-text a div#dev-logo{
 	width: 90px;
 	height: 65px;
 	background-image: url("../images/logo-AC.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: auto;
+	opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+footer div.center div#dev-text a div#dev-logo:hover{
+	opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 footer div.center p{
