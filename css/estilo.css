@@ -426,8 +426,12 @@ section#fifthSection div.center{
 
 footer{
 	width: 100%;
-	height: 300px;
-	background-color: orange;
+	height: 100px;
+	background-color: #555;
 	float: left;
+}
+
+footer div.center{
+	background-color: orange;
 }
 
