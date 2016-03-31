@@ -12,24 +12,6 @@
 	Theme controls how everything looks in Gallery CSS.
 */
 
-@keyframes fadeAnimation{
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
 .gallery {
   position: absolute;
   top: 0;
@@ -43,25 +25,18 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  animation-name: fadeAnimation;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 #banner1{
   background-image: url("../images/img-banner3.jpg");
-  animation-delay: 6s;
 }
 
 #banner2{
   background-image: url("../images/img-banner4.jpg");
-  animation-delay: 4s;
 }
 
 #banner3{
   background-image: url("../images/img-banner5.jpg");
-  animation-delay: 2s;
 }
 
 

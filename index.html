@@ -49,21 +49,27 @@
       });
     });
 
-    var imagesBanner = ["images/img-banner5.jpg", "images/img-banner4.jpg", "images/img-banner3.jpg"];
-    var currentImage = 0;
+    var divs = ["#banner3", "#banner2", "#banner1"];
+    var currentDiv = 0;
     function rotateBanner(){
-    	currentImage = (currentImage + 1) % imagesBanner.length;
     	
+    	if(currentDiv == divs.length-1){
+    		$(divs[0]).fadeIn(1000, function(){
+    			for (var i = 1; i < divs.length-1; i++) {
+    				$(divs[i]).fadeIn(0);
+    			};
+    			
+    		});
+    		
+    	}else{
+    		$(divs[currentDiv]).fadeOut(1000);
+    	}
 
-    	$( ".gallery" ).animate({
-		    'background-position-x': '-100%',
-		}, 500, function() {
-    	$('.gallery').css('background-image', 'url('+imagesBanner[currentImage]+')');
-  	});
+    	currentDiv = (currentDiv + 1) % divs.length;
     	
     }
 
-    //setInterval(rotateBanner, 2500);
+    setInterval(rotateBanner, 3500);
     
 </script>
 </head>
