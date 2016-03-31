@@ -434,18 +434,33 @@ section#fifthSection div.center h1{
 
 footer{
 	width: 100%;
-	height: 100px;
-	background-color: #555;
+	background-color: #333;
 	float: left;
+	padding: 10px;
+}
+
+footer div.center{
+	
 }
 
 footer div.center div.fb-like{
-	width: 100%;
+	flex-grow: 1;
+
 }
 
 footer div.center div#copyright{
-	width: 100%;
 	text-align: center;
+	flex-grow: 1;
+	background-color: blue;
+}
+
+footer div.center div#dev-text div#dev-logo{
+	width: 90px;
+	height: 65px;
+	background-image: url("../images/logo-AC.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: auto;
 }
 
 footer div.center p{
