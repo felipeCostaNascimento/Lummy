@@ -15,56 +15,89 @@
 <![endif]-->
 <script src="js/classie.js"></script>
 <script>
-    function init() {
-        window.addEventListener('scroll', function(e){
-            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                shrinkOn = 300,
-                header = document.querySelector("header");
-            if (distanceY > shrinkOn) {
-                classie.add(header,"smaller");
-            } else {
-                if (classie.has(header,"smaller")) {
-                    classie.remove(header,"smaller");
-                }
-            }
-        });
-    }
-    window.onload = init();
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                  $('html,body').animate({
-                      scrollTop: target.offset().top - 80
-                  }, 1000);
-                  return false;
-              }
-          }
-      });
+	
+
+    $(document).ready(function(){
+    	var divs = ["#banner4", "#banner3", "#banner2", "#banner1"];
+    	var currentDiv = -1;
+    	var timer = setInterval(forwardBanner, 5500);
+
+    	init();
+
+
+    	function init() {
+	        window.addEventListener('scroll', function(e){
+	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	                shrinkOn = 300,
+	                header = document.querySelector("header");
+	            if (distanceY > shrinkOn) {
+	                classie.add(header,"smaller");
+	            } else {
+	                if (classie.has(header,"smaller")) {
+	                    classie.remove(header,"smaller");
+	                }
+	            }
+	        });
+    	}
+
+    	$(function() {
+      		$('a[href*=#]:not([href=#])').click(function() {
+          		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              		var target = $(this.hash);
+
+	              if(this.hash == "#prev-banner"){
+	              		clearInterval(timer);
+	              		backBanner();
+						timer = setInterval(forwardBanner, 5500);
+	              		return false;
+	              }
+	              if(this.hash == "#next-banner"){
+	              		clearInterval(timer);
+	              		forwardBanner();
+	              		timer = setInterval(forwardBanner, 5500);
+	              		return false;
+	              }
+
+	              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	              if (target.length) {
+	                  $('html,body').animate({
+	                      scrollTop: target.offset().top - 80
+	                  }, 1000);
+	                  return false;
+	              }
+          	}
+      	});
     });
 
-    var divs = ["#banner4", "#banner3", "#banner2", "#banner1"];
-    var currentDiv = 0;
-    function rotateBanner(){
-    	
-    	if(currentDiv == divs.length-1){
-    		$(divs[0]).fadeIn(1000, function(){
+	function forwardBanner(){
+		currentDiv = (currentDiv + 1) % divs.length;
+
+		if(currentDiv == divs.length-1){
+			$(divs[0]).fadeIn(1000, function(){
     			for (var i = 1; i < divs.length-1; i++) {
     				$(divs[i]).fadeIn(0);
     			};
     		});
-    		
-    	}else{
-    		$(divs[currentDiv]).fadeOut(1000);
-    	}
+		}else{
+			$(divs[currentDiv]).fadeOut(1000);
+		}
+	}
 
-    	currentDiv = (currentDiv + 1) % divs.length;
-    	
-    }
+	function backBanner(){
+		var prevBanner = (currentDiv - 1) % divs.length;
+	    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
 
-    setInterval(rotateBanner, 5500);
+	    if(currentDiv == divs.length-1){
+	    	for (var i = 1; i < divs.length-1; i++) {
+    			$(divs[i]).fadeOut(0);
+    		};
+			$(divs[0]).fadeOut(1000);
+
+		}else{
+			$(divs[currentDiv]).fadeIn(1000);
+		}
+	}
+});
     
 </script>
 </head>
@@ -115,6 +148,15 @@
 	<div class="gallery" id="banner4">
 		<div class="center"><h1>ÓCULOS DE SOL</h1><p>preços a partir de <span class="preco">139,99</span></p></div>
 	</div>
+
+	
+		<div class="controls">
+	      <a href="#prev-banner" class="control-button"><</a>
+	      <a href="#next-banner" class="control-button">></a>
+    	</div>
+	
+	
+
 </section>
 
 <section id="secondSection">

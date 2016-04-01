@@ -1,9 +1,9 @@
-.gallery .control-button {
+.control-button {
   color: #ccc;
   color: rgba(255, 255, 255, 0.4);
 }
 
-.gallery .control-button:hover {
+.control-button:hover {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -100,22 +100,19 @@
   background-image: url("../images/img-banner3.jpg");
 }
 
-.gallery .item img{
-  width: 100%;
-  height: auto;
-}
-
-.gallery .controls {
+.controls {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
-.gallery .control-button {
+.control-button {
   display: inline-block;
   margin: 0 .02em;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
+  background-color: #000;
   text-decoration: none;
+  padding: 10px;
   transition: color .1s;
 }
