@@ -162,6 +162,10 @@ article#telefones div#whats-number{
 	div#menu nav{
 		flex-direction: column;
 	}
+
+	div#menu nav a{
+		font-size: 14px;
+	}
 }
 
 
