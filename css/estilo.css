@@ -163,9 +163,6 @@ article#telefones div#whats-number{
 		flex-direction: column;
 	}
 
-	div#menu nav a{
-		font-size: 14px;
-	}
 }
 
 
@@ -217,7 +214,7 @@ header div.center div#container-dir div#menu nav a{
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    font-size: 15px;
+    font-size: 0.8em;
     font-family: "Avenir Next Condensed";
 }
 
