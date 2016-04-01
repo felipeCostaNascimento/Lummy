@@ -87,14 +87,15 @@ div.center{
 
 
 header div.center div#logo{
-	width: 220px;
+	max-width: 220px;
+	height: calc(100% - 20px);
 	margin: 10px;
-	background-image: url("../images/logotipo-lummy.png");
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
-	float: left;
 	image-rendering: optimizeQuality;
+}
+
+header div.center img{
+	width: auto;
+	height: 100%;
 }
 
 
