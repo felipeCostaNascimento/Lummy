@@ -155,12 +155,15 @@ article#telefones div#whats-number{
 
 
 @media only screen and (max-width: 530px){
-	div#container-dir{
-	  	flex-direction: column;
-	}
 
 	div#menu nav{
 		flex-direction: column;
+	}
+
+	div#menu nav{
+		justify-content: center;
+		flex-flow: column nowrap;
+		line-height: 20px;
 	}
 
 }
@@ -174,6 +177,7 @@ header div.center div#container-dir{
   	display: -webkit-flex;
   	display: flex;
   	flex-direction: row;
+  	flex-flow: row wrap;
   	
 }
 header div.center div#container-dir div#menu{
@@ -198,14 +202,18 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
+  	width: 100%;
+  	height: 100%;
+  	background-color: orange;
+ 
 }
 
 
 header div.center div#container-dir div#menu nav a{
 	line-height: 108px;
 	flex-grow: 1;
-	text-align: center;
 	display: block;
+	text-align: center;
 	float: left;
 	color: #DDD;
 	outline: none;
