@@ -77,12 +77,15 @@
 	    		});
 			}else{
 				$(divs[currentDiv]).fadeOut(fadeTime);
-			}
+			}			
 
 			currentDiv = (currentDiv + 1) % divs.length;
 		}
 
 		function backBanner(){
+			var prevBanner = currentDiv - 1;
+		    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
+
 		    if(currentDiv == divs.length-1){
 		    	for (var i = 1; i < divs.length-1; i++) {
 	    			$(divs[i]).fadeOut(0);
@@ -92,9 +95,7 @@
 			}else{
 				$(divs[currentDiv]).fadeIn(fadeTime);
 			}
-
-			var prevBanner = currentDiv - 1;
-		    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
+			
 		}
 	});
     
