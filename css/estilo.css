@@ -162,6 +162,13 @@ article#telefones div#whats-number{
 		display: none;
 	}
 
+	div#menu-drop{
+		background-image: url("../images/menu-icone.png");
+		background-size: 60% auto;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
 	div#menu-drop img{
 		display: block;
 	}
@@ -184,7 +191,6 @@ header div.center div#container-dir div#menu{
 	width: 100%;
 	margin-bottom: 2px;
 	position: relative;
-	background-color: blue;
 }
 
 header div.center div#container-dir div#menu-drop{
@@ -201,6 +207,7 @@ header div.center div#container-dir div#menu-drop{
   	display: flex;
   	justify-content: center;
   	align-items: center;
+
 }
 
 header div.center div#container-dir div#menu-drop img{
@@ -215,8 +222,6 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
-
-  	background-color: orange;
  	
 }
 
@@ -224,7 +229,6 @@ header div.center div#container-dir div#menu nav{
 header div.center div#container-dir div#menu nav a{
 	line-height: 108px;
 	flex-grow: 1;
-	background-color: green;
 	color: #DDD;
 	text-align: center;
 	height: 100%;
