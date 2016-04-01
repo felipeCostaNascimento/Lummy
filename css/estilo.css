@@ -154,7 +154,7 @@ article#telefones div#whats-number{
 /******************/
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 450px){
 	header{
 		height: 80px;
 	}
@@ -162,7 +162,7 @@ article#telefones div#whats-number{
 		display: none;
 	}
 
-	div#menu-drop{
+	div#menu-drop img{
 		display: block;
 	}
 }
@@ -185,22 +185,20 @@ header div.center div#container-dir div#menu{
 	margin-bottom: 2px;
 	position: relative;
 	background-color: blue;
-	z-index: 4;
 }
 
 header div.center div#container-dir div#menu-drop{
-	width: 80px;
+	width: 50px;
 	max-width: 300px;
-	height: 60px;
-	line-height: 85px;
+	height: 40px;
 	position: fixed;
 	right: 25px;
-	top: 10px;
+	top: 20px;
 	text-align: center;
 }
 
 header div.center div#container-dir div#menu-drop img{
-	height: 55%;
+	height: 100%;
 	width: auto;
 }
 
