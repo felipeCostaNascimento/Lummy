@@ -162,7 +162,7 @@ article#telefones div#whats-number{
 
 	div#menu nav{
 		justify-content: center;
-		flex-flow: column nowrap;
+		flex-flow: column wrap;
 		line-height: 20px;
 	}
 
