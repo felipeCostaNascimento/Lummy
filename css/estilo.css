@@ -91,6 +91,7 @@ header div.center div#logo{
 	height: calc(100% - 20px);
 	margin: 10px;
 	image-rendering: optimizeQuality;
+	background-color: blue;
 }
 
 header div.center img{
@@ -154,18 +155,14 @@ article#telefones div#whats-number{
 /******************/
 
 
-@media only screen and (max-width: 530px){
-
-	div#menu nav{
-		flex-direction: column;
+@media screen and (max-width: 530px){
+	div#menu{
+		display: none;
 	}
 
-	div#menu nav{
-		justify-content: center;
-		flex-flow: column wrap;
-		line-height: 20px;
+	div#menu-drop{
+		display: block;
 	}
-
 }
 
 
@@ -176,24 +173,27 @@ header div.center div#container-dir{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
-  	flex-direction: row;
-  	flex-flow: row wrap;
+  	flex-direction: column;
+  	flex-flow: column wrap;
   	
 }
 header div.center div#container-dir div#menu{
+	float: right;
 	width: 100%;
 	margin-bottom: 2px;
 	position: relative;
+	background-color: blue;
+	
 }
 
-header div.center div#container-dir div#menu div#menu-mobile{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: orange;
+header div.center div#container-dir div#menu-drop{
+	width: calc(100% - 166px);
+	background-color: yellow;
+	line-height: 108px;
+	position: fixed;
+	right: 0;
 	top: 0;
-	text-align: center;
-	display: none;
+	
 }
 
 header div.center div#container-dir div#menu nav{
@@ -202,20 +202,19 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
-  	width: 100%;
-  	height: 100%;
+
   	background-color: orange;
- 
+ 	
 }
 
 
 header div.center div#container-dir div#menu nav a{
 	line-height: 108px;
 	flex-grow: 1;
-	display: block;
-	text-align: center;
-	float: left;
+	background-color: green;
 	color: #DDD;
+	text-align: center;
+	height: 100%;
 	outline: none;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
