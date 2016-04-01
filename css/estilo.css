@@ -194,12 +194,19 @@ header div.center div#container-dir div#menu-drop{
 	position: fixed;
 	right: 25px;
 	top: 20px;
-	text-align: center;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 header div.center div#container-dir div#menu-drop img{
-	height: 100%;
+	height: 70%;
 	width: auto;
+
 }
 
 header div.center div#container-dir div#menu nav{
