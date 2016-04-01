@@ -154,19 +154,13 @@ article#telefones div#whats-number{
 /******************/
 
 
-@media screen and (max-width: 530px){
+@media only screen and (max-width: 530px){
 	div#container-dir{
 	  	flex-direction: column;
 	}
 
 	div#menu nav{
 		flex-direction: column;
-	}
-	div#menu nav a{
-		line-height: 50px;
-	}
-	div#menu-mobile{
-		display: inline-block;
 	}
 }
 
@@ -203,9 +197,6 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
-  	position: absolute;
-  	top: 0;
-  	width: 100%;
 }
 
 
