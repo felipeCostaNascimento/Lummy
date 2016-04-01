@@ -4,9 +4,7 @@
 <title>Óticas Lummy</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/gallery.theme.css">
-<link rel="stylesheet" type="text/css" href="css/gallery.min.css">
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!--[if lt IE 9]>
@@ -19,8 +17,9 @@
 
     $(document).ready(function(){
     	var divs = ["#banner4", "#banner3", "#banner2", "#banner1"];
-    	var currentDiv = -1;
+    	var currentDiv = 0;
     	var timer = setInterval(forwardBanner, 5500);
+    	var fadeTime = 800;
 
     	init();
 
@@ -40,64 +39,64 @@
 	        });
     	}
 
-    	$(function() {
-      		$('a[href*=#]:not([href=#])').click(function() {
-          		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    	
+		$('body').on('click', 'a.jsevent', function(){
+			
+				
+              	if(this.hash == "#prev-banner"){
+              		clearInterval(timer);
+              		timer = setInterval(forwardBanner, 5500);
+              		backBanner();
+              		return false;
+
+              	}else if(this.hash == "#next-banner"){
+              		clearInterval(timer);
+              		timer = setInterval(forwardBanner, 5500);
+              		forwardBanner();
+              		return false;
+
+              	}else{
               		var target = $(this.hash);
+              		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              		if (target.length) {
+                  		$('html,body').animate({
+                      		scrollTop: target.offset().top - 80
+                  		}, 1000);
+                  		return false;
+              		}	
+              	}
+      		
+		});
 
-	              if(this.hash == "#prev-banner"){
-	              		clearInterval(timer);
-	              		backBanner();
-						timer = setInterval(forwardBanner, 5500);
-	              		return false;
-	              }
-	              if(this.hash == "#next-banner"){
-	              		clearInterval(timer);
-	              		forwardBanner();
-	              		timer = setInterval(forwardBanner, 5500);
-	              		return false;
-	              }
+		function forwardBanner(){
+			if(currentDiv == divs.length-1){
+				$(divs[0]).fadeIn(fadeTime, function(){
+	    			for (var i = 1; i < divs.length-1; i++) {
+	    				$(divs[i]).fadeIn(0);
+	    			};
+	    		});
+			}else{
+				$(divs[currentDiv]).fadeOut(fadeTime);
+			}
 
-	              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	              if (target.length) {
-	                  $('html,body').animate({
-	                      scrollTop: target.offset().top - 80
-	                  }, 1000);
-	                  return false;
-	              }
-          	}
-      	});
-    });
-
-	function forwardBanner(){
-		currentDiv = (currentDiv + 1) % divs.length;
-
-		if(currentDiv == divs.length-1){
-			$(divs[0]).fadeIn(1000, function(){
-    			for (var i = 1; i < divs.length-1; i++) {
-    				$(divs[i]).fadeIn(0);
-    			};
-    		});
-		}else{
-			$(divs[currentDiv]).fadeOut(1000);
+			currentDiv = (currentDiv + 1) % divs.length;
 		}
-	}
 
-	function backBanner(){
-		var prevBanner = (currentDiv - 1) % divs.length;
-	    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
+		function backBanner(){
+		    if(currentDiv == divs.length-1){
+		    	for (var i = 1; i < divs.length-1; i++) {
+	    			$(divs[i]).fadeOut(0);
+	    		};
+				$(divs[0]).fadeOut(fadeTime);
 
-	    if(currentDiv == divs.length-1){
-	    	for (var i = 1; i < divs.length-1; i++) {
-    			$(divs[i]).fadeOut(0);
-    		};
-			$(divs[0]).fadeOut(1000);
+			}else{
+				$(divs[currentDiv]).fadeIn(fadeTime);
+			}
 
-		}else{
-			$(divs[currentDiv]).fadeIn(1000);
+			var prevBanner = currentDiv - 1;
+		    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
 		}
-	}
-});
+	});
     
 </script>
 </head>
@@ -125,10 +124,10 @@
 		<div id="container-dir">
 			<div id="menu">
 				<nav>
-					<a href="#secondSection">PRODUTOS</a>
-					<a href="#thirdSection">MARCAS</a>
-					<a href="#fourthSection">VENHA CONHECER</a>
-					<a href="#fifthSection">SOBRE NÓS</a>
+					<a href="#firstSection" class="jsevent">PRODUTOS</a>
+					<a href="#thirdSection" class="jsevent">MARCAS</a>
+					<a href="#fourthSection" class="jsevent">VENHA CONHECER</a>
+					<a href="#fifthSection" class="jsevent">SOBRE NÓS</a>
 				</nav>
 			</div>
 		</div>
@@ -151,8 +150,8 @@
 
 	
 		<div class="controls">
-	      <a href="#prev-banner" class="control-button"><</a>
-	      <a href="#next-banner" class="control-button">></a>
+	      <a href="#prev-banner" class="jsevent"><</a>
+	      <a href="#next-banner" class="jsevent">></a>
     	</div>
 	
 	
@@ -171,7 +170,7 @@
 		</div>
 		<div id="texto-produtos" class="produtos">
 			<p>Conheça todos os nossos produtos e preços nos fazendo uma visita.</p>
-			<a href="#fourthSection">VENHA CONHECER</a>
+			<a href="#fourthSection" class="jsevent">VENHA CONHECER</a>
 		</div>
 		
 	</div>

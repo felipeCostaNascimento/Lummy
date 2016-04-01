@@ -106,7 +106,7 @@
   width: 100%;
   text-align: center;
 }
-.control-button {
+.controls a {
   display: inline-block;
   margin: 0 .02em;
   font-size: 2em;
