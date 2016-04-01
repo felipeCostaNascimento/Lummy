@@ -153,10 +153,45 @@ article#telefones div#whats-number{
 
 /******************/
 
+
+@media screen and (max-width: 530px){
+	div#container-dir{
+	  	flex-direction: column;
+	}
+
+	div#menu nav{
+		flex-direction: column;
+	}
+	div#menu-mobile{
+		display: inline-block;
+	}
+}
+
+
+
+header div.center div#container-dir{
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	flex-direction: row;
+  	
+}
 header div.center div#container-dir div#menu{
-	float: right;
-	width: calc(100% - 10px);
+	width: 100%;
 	margin-bottom: 2px;
+	position: relative;
+}
+
+header div.center div#container-dir div#menu div#menu-mobile{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: orange;
+	top: 0;
+	text-align: center;
+	display: none;
 }
 
 header div.center div#container-dir div#menu nav{
@@ -165,10 +200,13 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
+  	position: absolute;
+  	top: 0;
+  	width: 100%;
 }
 
 
-header div.center div#container-dir div#menu a{
+header div.center div#container-dir div#menu nav a{
 	line-height: 108px;
 	flex-grow: 1;
 	text-align: center;
