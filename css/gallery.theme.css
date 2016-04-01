@@ -18,28 +18,76 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFF;
+  background-color: #B43D25;
   overflow: hidden;
   text-align: center;
-  background-color: #4d87e2;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+  
+}
+
+.gallery div.center{
+  height: calc(100% - 110px);
+  margin-top: 110px;
+  padding: 0px 15px 0px 15px;
+  width: calc(100% - 30px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery div.center h1{
+  width: 100%;
+  font-size: 35px;
+  font-family: "Avenir Next Condensed";
+}
+
+.gallery div.center span.preco{
+  font-weight: bold;
+}
+
+.gallery div.center p{
+  width: 100%;
 }
 
 #banner1{
   background-image: url("../images/img-banner3.jpg");
 }
 
+#banner1 div.center{
+  
+  text-align: left;
+  color: #FFF;
+}
+
+
 #banner2{
   background-image: url("../images/img-banner4.jpg");
 }
 
 #banner3{
-  background-image: url("../images/img-banner5.jpg");
+  background-image: url("../images/img-banner6.jpg");
+  background-position: center bottom;
+
+}
+#banner3 div.center{
+  text-align: left;
 }
 
+#banner4{
+  background-image: url("../images/img-banner5.jpg");
 
+}
+#banner4 div.center{
+  text-align: right;
+
+}
 
 
 .gallery #img-banner1{
