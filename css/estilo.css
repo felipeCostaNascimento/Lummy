@@ -28,6 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	font-family: "Avenir Next";
@@ -172,6 +173,8 @@ article#telefones div#whats-number{
 	header div.center div#container-dir div#menu-lateral{
 		left: 0px;
 	}
+
+
 }
 
 
