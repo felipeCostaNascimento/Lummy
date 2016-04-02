@@ -176,8 +176,8 @@ article#telefones div#whats-number{
 		background-position: center center;
 		background-repeat: no-repeat;
 		animation-name: menuDropAnimation;
-    	animation-duration: 1.5s;
-    	animation-delay: 1s;
+    	animation-duration: 1s;
+    	
     	-webkit-animation-fill-mode:forwards;
 		-moz-animation-fill-mode:forwards;
 		animation-fill-mode:forwards;
