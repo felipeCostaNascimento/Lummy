@@ -207,7 +207,7 @@ header div.center div#container-dir div#menu-lateral a{
 	overflow: hidden;
 }
 
-header div.center div#container-dir div#menu-lateral a:active{
+header div.center div#container-dir div#menu-lateral a:hover{
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -235,7 +235,7 @@ header div.center div#container-dir div#menu-drop{
   	align-items: center;
 }
 
-header div.center div#container-dir div#menu-drop:active{
+header div.center div#container-dir div#menu-drop:hover{
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
