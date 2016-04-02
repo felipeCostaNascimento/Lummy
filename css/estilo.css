@@ -169,8 +169,8 @@ article#telefones div#whats-number{
 		background-repeat: no-repeat;
 	}
 
-	div#menu-drop img{
-		display: block;
+	header div.center div#container-dir div#menu-lateral{
+		left: 0px;
 	}
 }
 
@@ -186,6 +186,31 @@ header div.center div#container-dir{
   	flex-flow: column wrap;
   	
 }
+
+header div.center div#container-dir div#menu-lateral{
+	width: 100%;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	background-color: #B43D25;
+	text-align: center;
+	display: none;
+}
+
+header div.center div#container-dir div#menu-lateral a{
+	width: 100%;
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+	color: #FFF;
+	font-size: 0.8em;
+}
+
+header div.center div#container-dir div#menu-lateral a:active{
+	background-color: #FFF;
+}
+
+
 header div.center div#container-dir div#menu{
 	float: right;
 	width: 100%;
@@ -210,9 +235,10 @@ header div.center div#container-dir div#menu-drop{
 
 }
 
-header div.center div#container-dir div#menu-drop img{
-	height: 70%;
-	width: auto;
+header div.center div#container-dir div#menu-drop a{
+	width: 100%;
+	height: 100%;
+	display: block;
 
 }
 

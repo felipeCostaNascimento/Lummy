@@ -14,7 +14,6 @@
 <script src="js/classie.js"></script>
 <script>
 	
-
     $(document).ready(function(){
     	var divs = ["#banner4", "#banner3", "#banner2", "#banner1"];
     	var currentDiv = 0;
@@ -26,6 +25,7 @@
 
     	function init() {
 	        window.addEventListener('scroll', function(e){
+	        	e.preventDefault();
 	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
 	                shrinkOn = 300,
 	                header = document.querySelector("header");
@@ -39,34 +39,56 @@
 	        });
     	}
 
+    	$('.body').click(function(e){
+    		e.stopPropagation();
+		});
     	
 		$('body').on('click', 'a.jsevent', function(){
-			
-				
-              	if(this.hash == "#prev-banner"){
-              		clearInterval(timer);
-              		timer = setInterval(forwardBanner, 5500);
-              		backBanner();
-              		return false;
+			var parent = $(this).closest('div');
+			if(parent.attr('id') == "menu-lateral"){
 
-              	}else if(this.hash == "#next-banner"){
-              		clearInterval(timer);
-              		timer = setInterval(forwardBanner, 5500);
-              		forwardBanner();
-              		return false;
+				automaticScroll($(this.hash));
+				parent.animate({
+					height: "toggle"
+				}, 500);
 
-              	}else{
-              		var target = $(this.hash);
-              		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              		if (target.length) {
-                  		$('html,body').animate({
-                      		scrollTop: target.offset().top - 80
-                  		}, 1000);
-                  		return false;
-              		}	
-              	}
-      		
+				return false
+			}else if(parent.attr('id') == "menu-drop"){
+				$('div#menu-lateral').animate({
+					height: "toggle"
+				}, 500);
+
+				return false
+			}
+
+          	if(this.hash == "#prev-banner"){
+          		clearInterval(timer);
+          		timer = setInterval(forwardBanner, 5500);
+          		backBanner();
+          		return false;
+
+          	}else if(this.hash == "#next-banner"){
+          		clearInterval(timer);
+          		timer = setInterval(forwardBanner, 5500);
+          		forwardBanner();
+          		return false;
+
+          	}else{
+          		automaticScroll($(this.hash));
+          	}
 		});
+
+		function automaticScroll(target){
+          		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          		if (target.length) {
+              		$('html,body').animate({
+                  		scrollTop: target.offset().top - 80
+              		}, 1000);
+              		return false;
+          		}	
+		}
+
+
 
 		function forwardBanner(){
 			if(currentDiv == divs.length-1){
@@ -124,11 +146,20 @@
 		</div>
 		
 		<div id="container-dir">
-			<a href="#">
+
+			
 				<div id="menu-drop">
-					
+					<a href="#" class="jsevent"></a>
 				</div>
-			</a>
+			
+			<div id="menu-lateral">
+				<a href="#firstSection" class="jsevent">PRODUTOS</a>
+				<a href="#thirdSection" class="jsevent">MARCAS</a>
+				<a href="#fourthSection" class="jsevent">VENHA CONHECER</a>
+				<a href="#fifthSection" class="jsevent">SOBRE NÓS</a>
+			</div>
+
+
 			<div id="menu">
 				
 
