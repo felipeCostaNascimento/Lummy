@@ -25,7 +25,7 @@
 
     	function init() {
 	        window.addEventListener('scroll', function(e){
-	        	e.preventDefault();
+	        	$('div#menu-lateral').hide();
 	            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
 	                shrinkOn = 300,
 	                header = document.querySelector("header");
@@ -39,23 +39,25 @@
 	        });
     	}
 
-    	$('.body').click(function(e){
-    		e.stopPropagation();
+    	$(document).on("click", function () {
+    		$('div#menu-lateral').hide();
 		});
     	
-		$('body').on('click', 'a.jsevent', function(){
+		$('body').on('click', 'a.jsevent', function(e){
 			var parent = $(this).closest('div');
 			if(parent.attr('id') == "menu-lateral"){
-
+				e.stopPropagation();
 				automaticScroll($(this.hash));
 				parent.animate({
-					height: "toggle"
+					height: 'toggle'
 				}, 500);
+
 
 				return false
 			}else if(parent.attr('id') == "menu-drop"){
+				e.stopPropagation();
 				$('div#menu-lateral').animate({
-					height: "toggle"
+					height: 'toggle'
 				}, 500);
 
 				return false

@@ -189,9 +189,9 @@ header div.center div#container-dir{
 
 header div.center div#container-dir div#menu-lateral{
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 80px;
-	left: 0;
+	right: 0px;
 	background-color: #B43D25;
 	text-align: center;
 	display: none;
@@ -203,11 +203,12 @@ header div.center div#container-dir div#menu-lateral a{
 	padding: 10px;
 	text-decoration: none;
 	color: #FFF;
-	font-size: 0.8em;
+	font-size: 14px;
+	overflow: hidden;
 }
 
 header div.center div#container-dir div#menu-lateral a:active{
-	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -221,10 +222,10 @@ header div.center div#container-dir div#menu{
 header div.center div#container-dir div#menu-drop{
 	width: 50px;
 	max-width: 300px;
-	height: 40px;
+	height: 50px;
 	position: fixed;
 	right: 25px;
-	top: 20px;
+	top: 15px;
 	display: -webkit-box;
   	display: -moz-box;
   	display: -ms-flexbox;
@@ -232,7 +233,10 @@ header div.center div#container-dir div#menu-drop{
   	display: flex;
   	justify-content: center;
   	align-items: center;
+}
 
+header div.center div#container-dir div#menu-drop:active{
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 header div.center div#container-dir div#menu-drop a{
