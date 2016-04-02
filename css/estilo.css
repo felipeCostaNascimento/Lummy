@@ -154,8 +154,15 @@ article#telefones div#whats-number{
 
 /******************/
 
+@keyframes menuDropAnimation {
+    from {right: -50px;}
+    to {right: 15px;}
+}
+
 
 @media screen and (max-width: 450px){
+
+
 	header{
 		height: 80px;
 	}
@@ -168,11 +175,17 @@ article#telefones div#whats-number{
 		background-size: 60% auto;
 		background-position: center center;
 		background-repeat: no-repeat;
+		animation-name: menuDropAnimation;
+    	animation-duration: 2s;
+    	-webkit-animation-fill-mode:forwards;
+		-moz-animation-fill-mode:forwards;
+		animation-fill-mode:forwards;
 	}
 
-	header div.center div#container-dir div#menu-drop:hover{
-	background-color: rgba(255, 255, 255, 0.3);
-}
+	header div.center div#container-dir div#menu-drop{
+		
+	}
+	
 
 }
 
@@ -223,7 +236,7 @@ header div.center div#container-dir div#menu-drop{
 	max-width: 300px;
 	height: 50px;
 	position: fixed;
-	right: 25px;
+	right: -50px;
 	top: 15px;
 	display: -webkit-box;
   	display: -moz-box;
@@ -231,16 +244,19 @@ header div.center div#container-dir div#menu-drop{
   	display: -webkit-flex;
   	display: flex;
   	justify-content: center;
-  	align-items: center;
+  	align-items: center; 
 }
 
+header div.center div#container-dir div#menu-drop:hover{
+	background-color: rgba(255, 255, 255, 0.4);	
+}
 
 
 header div.center div#container-dir div#menu-drop a{
 	width: 100%;
 	height: 100%;
 	display: block;
-
+	
 }
 
 header div.center div#container-dir div#menu nav{
