@@ -496,7 +496,7 @@ section#fifthSection div.center h1{
 
 
 section#redes-sociais{
-	background-color: #BBB;
+	background-color: #475C9F;
 }
 
 section#redes-sociais div.center{
@@ -506,6 +506,7 @@ section#redes-sociais div.center{
 	align-content: center;
 	justify-content: center;
 	flex-flow: row wrap;
+	color: #FFF;
 }
 
 section#redes-sociais div.center div.fb-like{
