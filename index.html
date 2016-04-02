@@ -48,17 +48,19 @@
 			if(parent.attr('id') == "menu-lateral"){
 				e.stopPropagation();
 				automaticScroll($(this.hash));
-				parent.animate({
-					height: 'toggle'
-				}, 500);
+				parent.toggle(500);
+				// parent.animate({
+				// 	height: 'toggle'
+				// }, 500);
 
 
 				return false
 			}else if(parent.attr('id') == "menu-drop"){
 				e.stopPropagation();
-				$('div#menu-lateral').animate({
-					height: 'toggle'
-				}, 500);
+				// $('div#menu-lateral').animate({
+				// 	height: 'toggle'
+				// }, 500);
+				$('div#menu-lateral').toggle(500);
 
 				return false
 			}
@@ -77,6 +79,7 @@
 
           	}else{
           		automaticScroll($(this.hash));
+          		return false;
           	}
 		});
 

@@ -88,7 +88,7 @@ div.center{
 
 
 header div.center div#logo{
-	max-width: 220px;
+	width: 170px;
 	height: calc(100% - 20px);
 	margin: 10px;
 	image-rendering: optimizeQuality;
@@ -170,10 +170,9 @@ article#telefones div#whats-number{
 		background-repeat: no-repeat;
 	}
 
-	header div.center div#container-dir div#menu-lateral{
-		left: 0px;
-	}
-
+	header div.center div#container-dir div#menu-drop:hover{
+	background-color: rgba(255, 255, 255, 0.3);
+}
 
 }
 
@@ -210,9 +209,6 @@ header div.center div#container-dir div#menu-lateral a{
 	overflow: hidden;
 }
 
-header div.center div#container-dir div#menu-lateral a:hover, a:active{
-	background-color: rgba(255, 255, 255, 0.3);
-}
 
 
 header div.center div#container-dir div#menu{
@@ -238,9 +234,7 @@ header div.center div#container-dir div#menu-drop{
   	align-items: center;
 }
 
-header div.center div#container-dir div#menu-drop:hover, div#menu-drop:active{
-	background-color: rgba(255, 255, 255, 0.3);
-}
+
 
 header div.center div#container-dir div#menu-drop a{
 	width: 100%;
@@ -255,7 +249,7 @@ header div.center div#container-dir div#menu nav{
   	display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
- 	
+ 	width: 100%;
 }
 
 
