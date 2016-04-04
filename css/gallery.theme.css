@@ -35,7 +35,7 @@
 
 .gallery div.center h1{
   width: 100%;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "Avenir Next Condensed";
 }
 
@@ -45,52 +45,53 @@
 
 .gallery div.center p{
   width: 100%;
+  font-size: 1em;
 }
+
 
 #banner1{
-  background-image: url("../images/img-banner3.jpg");
+  background-image: url("../images/img-lente-contato.jpg");
+}
+#banner2{
+  background-image: url("../images/img-armacao.jpg");
+}
+#banner3{
+  background-image: url("../images/img-oculos-sol.jpg");
+}
+#banner4{
+  background-image: url("../images/img-parcele.jpg");
 }
 
+
 #banner1 div.center{
-  
   text-align: left;
   color: #FFF;
 }
 
-
-#banner2{
-  background-image: url("../images/img-banner4.jpg");
-}
-
-#banner3{
-  background-image: url("../images/img-banner6.jpg");
-  background-position: center bottom;
-
-}
-#banner3 div.center{
+#banner2 div.center{
   text-align: left;
-  text-shadow: 1px 1px 2px #FFF;
 }
 
-#banner4{
-  background-image: url("../images/img-banner5.jpg");
-
+#banner3 div.center{
+  text-align: right;
 }
 #banner4 div.center{
-  text-align: right;
-
+  text-align: left;
+  align-items: left;
 }
 
+#banner4 div.center h1{
+  max-width: 450px;
+  background-color: orange;
+  padding: 10px;
+}
+#banner4 div.center p{
+  max-width: 360px;
+  background-color: orange;
+  padding: 10px;
+}
 
-.gallery #img-banner1{
-  background-image: url("../images/img-banner5.jpg");
-}
-.gallery #img-banner2{
-  background-image: url("../images/img-banner4.jpg");
-}
-.gallery #img-banner3{
-  background-image: url("../images/img-banner3.jpg");
-}
+
 
 .controls {
   position: absolute;
