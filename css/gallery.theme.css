@@ -76,8 +76,8 @@
   text-align: right;
 }
 #banner4 div.center{
-  text-align: left;
-  align-items: left;
+  text-align: center;
+  
 }
 
 #banner4 div.center h1{
@@ -86,7 +86,7 @@
   padding: 10px;
 }
 #banner4 div.center p{
-  max-width: 360px;
+  max-width: 350px;
   background-color: orange;
   padding: 10px;
 }
@@ -122,6 +122,6 @@
 
 .controls div.center a:hover {
   
-  background-color: rgba(180,71,37, 0.4);
+  background-color: rgba(233,163,38, 0.4);
 }
 

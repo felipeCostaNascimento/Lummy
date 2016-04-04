@@ -573,6 +573,27 @@ footer div.center{
 	width: calc(100% - 20);
 }
 
+footer div.center div#footer-esq{
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	flex-grow: 1;
+  	flex-flow: column wrap;
+}
+
+footer div.center div#cartoes{
+	max-width: 260px;
+	background-color: #FFF;
+	text-align: center;
+	margin: 10px;
+}
+
+footer div.center div#cartoes img{
+	width: 100%;
+}
+
 footer div.center div#copyright{
 	text-align: center;
 	flex-grow: 1;
@@ -586,10 +607,11 @@ footer div.center div#copyright{
 
 footer div.center div#dev-text{
 	min-width: 130px;
+	margin: 10px;
 }
 
 footer div.center div#dev-text a div#dev-logo{
-	width: 90px;
+	max-width: 90px;
 	height: 65px;
 	background-image: url("../images/logo-AC.png");
 	background-size: cover;
