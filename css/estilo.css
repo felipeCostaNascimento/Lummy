@@ -358,9 +358,9 @@ section#secondSection div.center div#categorias p{
 }
 
 section#secondSection div.center div.produtos{
-	width: 435px;
-	height: 300px;
-	background-size: 90% auto;
+	width: 310px;
+	height: 200px;
+	background-size: 100% auto;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-color: #FFF;
@@ -376,7 +376,7 @@ section#secondSection div.center div.produtos div.desc-produto{
 }
 
 section#secondSection div.center div#categoria1{
-	background-image: url("../images/img-categoria1.png");
+	background-image: url("../images/img-categoria1-teste.jpg");
 	position: relative;
 }
 
@@ -391,9 +391,9 @@ section#secondSection div.center div#categoria1 div#oculos-sol{
 }
 
 section#secondSection div.center div#categoria2{
-	background-image: url("../images/img-categoria2.png");
+	background-image: url("../images/img-categoria2-teste.jpg");
 	position: relative;
-	background-color: #EEE;
+	
 }
 
 section#secondSection div.center div#categoria2 div#lente-colorida{
@@ -402,6 +402,7 @@ section#secondSection div.center div#categoria2 div#lente-colorida{
 	left: 0px;
 	text-align: center;
 }
+
 
 section#secondSection div.center div#texto-produtos{
 	font-family: "Avenir Next";
@@ -417,6 +418,9 @@ section#secondSection div.center div#texto-produtos{
 	height: 200px;
 	text-align: center;
 	color: #000;
+	width: 470px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 section#secondSection div.center div#texto-produtos a{
@@ -432,9 +436,8 @@ section#secondSection div.center div#texto-produtos a:hover{
 }
 
 section#secondSection div.center div#categoria3{
-	background-image: url("../images/img-categoria3.png");
+	background-image: url("../images/img-categoria3-teste.jpg");
 	position: relative;
-	background-color: #EEE;
 }
 
 section#secondSection div.center div#categoria3 div#lente-grau{
