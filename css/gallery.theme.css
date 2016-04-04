@@ -82,13 +82,15 @@
 
 #banner4 div.center h1{
   max-width: 450px;
-  background-color: orange;
+  background-color: #B43D25;
+  color: #FFF;
   padding: 10px;
 }
 #banner4 div.center p{
-  max-width: 350px;
-  background-color: orange;
+  max-width: 340px;
+  background-color: #000;
   padding: 10px;
+  color: #FFF;
 }
 
 
@@ -122,6 +124,6 @@
 
 .controls div.center a:hover {
   
-  background-color: rgba(233,163,38, 0.4);
+  background-color: rgba(180,61,37, 0.4);
 }
 
