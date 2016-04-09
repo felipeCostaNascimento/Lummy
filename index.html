@@ -16,7 +16,7 @@
 <meta http-equiv="expires" content="-1">
 
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
-<link rel="stylesheet" type="text/css" href="css/gallery.theme.css">
+<link rel="stylesheet" type="text/css" href="css/gallery.css">
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="js/classie.js"></script>
@@ -27,15 +27,6 @@
 <![endif]-->
 </head>
 <body>
-
-<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
 
 <header>
 	<article id="telefones">
@@ -170,24 +161,30 @@
 	</div>
 </section>
 
-<section id="redes-sociais">
+<section id="pre-footer">
 	<div class="center">
-		<h1>Acompanhe-nos pelo facebook</h1>
-		<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+		<div id"funcionamento" class="pre-footer-item">
+			<h1>HORÁRIOS DE FUNCIONAMENTO</h1>
+			<p>segunda a sexta das 9:30 as 18:00.</p>
+			<p>sábado das 9:30 as 15:00.</p>
+		</div>
+		<div id="cartoes" class="pre-footer-item">
+			<h1>ACEITAMOS</h1>
+			<img src="images/cartoes.png">
+		</div>
+		<div id="sociais" class="pre-footer-item">
+			<h1>REDES SOCIAIS</h1>
+			<div id="fb-like"><a href="#"><img src="images/fb.png"></a></div>
+			
+		</div>
 	</div>
 </section>
 
 <footer>
 
 	<div class="center">
-		<div id="footer-esq">
-			<div id="cartoes">
-				<p>ACEITAMOS</p>
-				<img src="images/cartoes.png">
-			</div>
-			<div id="copyright">
-				<p>© 2016 Óticas Lummy - Todos os direitos reservados.</p>
-			</div>
+		<div id="copyright">
+			<p>© 2016 Óticas Lummy - Todos os direitos reservados.</p>
 		</div>
 		<div id="dev-text">
 			<p>desenvolvido por</p>
