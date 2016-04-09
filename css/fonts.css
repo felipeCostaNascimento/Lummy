@@ -1,0 +1,19 @@
+@font-face{
+	font-family: "LAO-Regular";
+	src: url("../fonts/Lao MN.ttc");
+}
+
+@font-face{
+	font-family: "AvenirNext-Regular";
+	src: url("../fonts/AvenirNext-Regular.ttf");
+}
+
+@font-face{
+	font-family: "AvenirNextCondensed-Regular";
+	src: url("../fonts/AvenirNextCondensed-Regular.ttf");
+}
+
+@font-face{
+	font-family: "AvenirNext-Bold";
+	src: url("../fonts/AvenirNext-Bold.ttf");
+}

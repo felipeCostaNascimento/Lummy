@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	font-family: "Avenir Next";
+	font-family: "AvenirNext-Regular";
 }
 ol, ul {
 	list-style: none;
@@ -51,13 +51,6 @@ table {
 a{
 	text-decoration: none;
 }
-
-
-@font-face{
-	font-family: "LAO";
-	src: url("../fonts/Lao MN.ttc");
-}
-
 
 /* Início */
 header{
@@ -282,8 +275,8 @@ header div.center div#container-dir div#menu nav a{
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    font-size: 0.8em;
-    font-family: "Avenir Next Condensed";
+    font-size: 0.9em;
+    font-family: "AvenirNextCondensed-Regular";
 }
 
 header div.center div#container-dir div#menu a:hover{
@@ -313,7 +306,7 @@ section div.center div.title-desc{
 }
 
 section div.center div.title-desc h1{
-	font-family: "LAO";
+	font-family: "LAO-Regular";
 	font-size: 25px;
 }
 
@@ -328,7 +321,7 @@ section#firstSection {
 /****** SECOND SECTION ******/
 section#secondSection {
 	background-color: #FFF;
-	font-family: "LAO";
+	font-family: "LAO-regular";
 	padding: 20px 0px 20px 0px;
 }
 
@@ -377,7 +370,7 @@ section#secondSection div.center div#categoria2{
 
 
 section#secondSection div.center div#texto-produtos{
-	font-family: "Avenir Next";
+	font-family: "AvenirNext-Regular";
 	display: -webkit-box;
   	display: -moz-box;
   	display: -ms-flexbox;
@@ -393,7 +386,7 @@ section#secondSection div.center div#texto-produtos{
 }
 
 section#secondSection div.center div#texto-produtos a{
-	font-family: "LAO";
+	font-family: "LAO-Regular";
 	color: #B43D25;
 	float: left;
 	margin-top: 5px;
@@ -428,7 +421,7 @@ section#thirdSection div.center div.marcas{
 	height: 190px;
 	background-color: #FFF;
 	margin-top: 20px;
-	font-family: "LAO";
+	font-family: "LAO-Regular";
 	font-size: 30px;
 	display: -webkit-box;
   	display: -moz-box;
@@ -476,7 +469,7 @@ section#fourthSection div.center div#exame-gratis{
 }
 
 section#fourthSection div.center div#exame-gratis span{
-	font-weight: bold;
+	font-family: "AvenirNext-Bold";
 }
 
 section#fourthSection div#maps{
