@@ -18,8 +18,8 @@
 }
 
 .gallery div.center{
-  height: calc(100% - 110px);
   margin-top: 110px;
+  height: calc(100% - 110px);
   padding: 0px 15px 0px 15px;
   display: -webkit-box;
   display: -moz-box;
@@ -30,6 +30,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: orange;
 }
 
 .gallery div.center h1{
@@ -102,7 +103,6 @@
 }
 
 .controls div.center{
-  width: calc(100% - 30px);
   justify-content: flex-end;
   padding-right: 15px;
 }
