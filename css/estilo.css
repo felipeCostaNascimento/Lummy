@@ -560,7 +560,6 @@ footer div.center div#copyright{
 footer div.center div#dev-text{
 	min-width: 130px;
 	margin: 0px 10px 0px 10px;
-
 	display: -webkit-box;
   	display: -moz-box;
   	display: -ms-flexbox;
@@ -568,7 +567,7 @@ footer div.center div#dev-text{
   	display: flex;
   	justify-content: center;
 	align-items: center;
-
+	flex-flow: row wrap;
 }
 
 footer div.center div#dev-text p{
