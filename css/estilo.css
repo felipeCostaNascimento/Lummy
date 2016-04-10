@@ -104,7 +104,7 @@ article#telefones{
 	top: 50%;
 	position: fixed;
 	padding: 0px 20px 0px 20px;
-	background-color: #FFF;
+	background-color: #EEE;
 	float: right;
 	border-bottom-left-radius: 10px;
 	border-top-left-radius: 10px;
@@ -560,22 +560,41 @@ footer div.center div#copyright{
 footer div.center div#dev-text{
 	min-width: 130px;
 	margin: 0px 10px 0px 10px;
-	text-align: center;
+
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	justify-content: center;
+	align-items: center;
+
+}
+
+footer div.center div#dev-text p{
+	
 }
 
 footer div.center div#dev-text a div#dev-logo{
 	width: 70px;
-	height: 50px;
+	height: 35px;
 	background-image: url("../images/logo-AC.png");
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center center;
 	margin: auto;
 	opacity: 0.6;
     filter: alpha(opacity=60);
+    -webkit-transition: background-image 0.2s;
+    -moz-transition: background-image 0.2s;
+    -ms-transition: background-image 0.2s;
+    -o-transition: background-image 0.2s;
+    transition: background-image 0.2s;
+
 }
 
 footer div.center div#dev-text a div#dev-logo:hover{
-	opacity: 1;
-    filter: alpha(opacity=100);
+
+    background-image: url("../images/logo-AC-colorful.png");
 }
 
