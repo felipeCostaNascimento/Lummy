@@ -450,6 +450,7 @@ section#fourthSection div.center{
 	justify-content: space-around;
 	align-items: center;
 	padding: 15px;
+	background-color: orange;
 }
 
 section#fourthSection div.center div.title-desc h1{
@@ -471,6 +472,10 @@ section#fourthSection div#maps{
 	width: 100%;
 }
 
+section#fourthSection div#maps iframe{
+	width: 100%;
+	border: none;
+}
 
 /****** FIFTH SECTION ******/
 
