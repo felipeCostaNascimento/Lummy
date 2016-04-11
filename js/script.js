@@ -4,6 +4,7 @@ $(document).ready(function(){
 	var currentDiv = 0;
 	var timer = setInterval(forwardBanner, 5500);
 	var fadeTime = 800;
+	var articleStartPositionY = 65; // 65%
 
 	init();
 
@@ -11,15 +12,34 @@ $(document).ready(function(){
 	function init() {
         window.addEventListener('scroll', function(e){
         	$('div#menu-lateral').hide();
-            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                shrinkOn = 300,
-                header = document.querySelector("header");
-            if (distanceY > shrinkOn) {
-                classie.add(header,"smaller");
+        
+            var distanceY = $(window).scrollTop(),
+            	headerLimit = 300;
+                
+            if (distanceY > headerLimit) {
+                $('header').addClass("smaller");
             } else {
-                if (classie.has(header,"smaller")) {
-                    classie.remove(header,"smaller");
+                if ($('header').hasClass("smaller")) {
+                    $('header').removeClass("smaller");
                 }
+            }
+
+
+
+            var telefones = $('article'),
+            	result = $('section#pre-footer').offset().top - distanceY,
+            	screenHeight = $(window).height(),
+            	positiontoShow = (articleStartPositionY * screenHeight / 100) + 70;
+
+            if(positiontoShow >= result){
+            	telefones.addClass("showPhones");
+            	telefones.css('top', result - 70 + 'px');
+            }else{
+            	if(telefones.hasClass("showPhones")){
+            		telefones.removeClass("showPhones");
+            		telefones.css('top', articleStartPositionY + '%');
+            	}
+            	
             }
         });
 	}

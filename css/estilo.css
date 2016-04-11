@@ -99,35 +99,31 @@ header div.center div#container-dir{
 
 
 /********* TELEFONES *********/
-article#telefones{
+article{
+	height: 70px;
 	right: -142px;
-	top: 50%;
+	top: 65%;
 	position: fixed;
-	padding: 0px 20px 0px 20px;
+	z-index: 1;
+	padding: 0px 20px 0px 10px;
 	background-color: #EEE;
-	float: right;
-	border-bottom-left-radius: 10px;
-	border-top-left-radius: 10px;
-	border: 1px solid #000;
-	transition-property: right;
-	transition-duration: 0.5s;
-	box-shadow: -2px 2px 0px #444;
-	opacity: 0.6;
-    filter: alpha(opacity=60);
+	-webkit-transition: right 0.4s;
+    -moz-transition: right 0.4s;
+    -ms-transition: right 0.4s;
+    -o-transition: right 0.4s;
+    transition: right 0.4s;
+	color: #000;
+	
 }
 
-article#telefones:hover{
+article:hover{
 	right: -3px;
 	opacity: 1;
     filter: alpha(opacity=100);
 }
 
 
-article#telefones p{
-	color: #000;
-}
-
-article#telefones div#phone-number{
+article div#phone-number{
 	background-image: url("../images/phone-icon.png");
 	background-size: auto 80%;
 	background-position: left center;
@@ -136,13 +132,19 @@ article#telefones div#phone-number{
 	line-height: 35px;
 }
 
-article#telefones div#whats-number{
+article div#whats-number{
 	background-image: url("../images/whatsapp-icon.png");
 	background-size: auto 80%;
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding-left: 38px;
 	line-height: 35px;
+}
+
+article.showPhones{
+	right: -3px;
+	opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 /******************/
@@ -176,6 +178,10 @@ article#telefones div#whats-number{
 		animation-fill-mode:forwards;
 	}
 	
+	article{
+		opacity: 0.6;
+    	filter: alpha(opacity=60);
+	}
 
 }
 
@@ -406,7 +412,7 @@ section#thirdSection div.center{
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
-	padding: 15px;
+	padding: 40px 15px 40px 15px;
 }
 
 section#thirdSection div.center div.marcas{
@@ -594,6 +600,6 @@ footer div.center div#dev-text a div#dev-logo{
 
 footer div.center div#dev-text a div#dev-logo:hover{
 
-    background-image: url("../images/logo-AC-colorful.png");
+    background-image: url("../images/logo-AC-complete.png");
 }
 
