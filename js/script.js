@@ -15,7 +15,6 @@ $(document).ready(function(){
 	function init() {
         window.addEventListener('scroll', function(e){
         	$('div#menu-lateral').hide();
-        
         	//CUIDA DO HEADER
             var distanceY = $(window).scrollTop(),
             	headerLimit = 300;
@@ -27,7 +26,6 @@ $(document).ready(function(){
                     $('header').removeClass("smaller");
                 }
             }
-
             //CUIDA DO ARTICLE QUE EXIBE OS TELEFONES
             var prefooterRelativePosition = $('section#pre-footer').offset().top - distanceY;
 
