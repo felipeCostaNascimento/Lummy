@@ -6,7 +6,6 @@ $(document).ready(function(){
 		fadeTime = 800,
 		articleStartPositionY = 65, // 65%
 		telefones = $('article'),
-		result = $('section#pre-footer').offset().top - distanceY,
 		screenHeight = $(window).height(),
 		positiontoShow = (articleStartPositionY * screenHeight / 100) + 70; //70 = ARTICLE.HEIGHT
 	
@@ -30,9 +29,11 @@ $(document).ready(function(){
             }
 
             //CUIDA DO ARTICLE QUE EXIBE OS TELEFONES
-            if(positiontoShow >= result){
+            var prefooterRelativePosition = $('section#pre-footer').offset().top - distanceY;
+            
+            if(positiontoShow >= prefooterRelativePosition){
             	telefones.addClass("showPhones");
-            	telefones.css('top', result - 70 + 'px');
+            	telefones.css('top', prefooterRelativePosition - 70 + 'px');
             }else{
             	if(telefones.hasClass("showPhones")){
             		telefones.removeClass("showPhones");
