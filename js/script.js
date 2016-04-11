@@ -4,10 +4,10 @@ $(document).ready(function(){
 		currentDiv = 0,
 		timer = setInterval(forwardBanner, 5500),
 		fadeTime = 800,
-		articleStartPositionY = 66, // 65%
 		telefones = $('article'),
+		articleStartPositionY = telefones.css('top'), // 65%
 		screenHeight = $(window).height(),
-		positiontoShow = (articleStartPositionY * screenHeight / 100) + 70; //70 = ARTICLE.HEIGHT
+		positiontoShow = (parseInt(articleStartPositionY, 10) * screenHeight / 100) + 70; //70 = ARTICLE.HEIGHT
 	
 
 	init();
@@ -33,11 +33,11 @@ $(document).ready(function(){
 
             if(positiontoShow >= prefooterRelativePosition){
             	telefones.addClass("showPhones");
-            	telefones.css('top', prefooterRelativePosition - 65 + 'px');
+            	telefones.css('top', prefooterRelativePosition - 70 + 'px');
             }else{
             	if(telefones.hasClass("showPhones")){
             		telefones.removeClass("showPhones");
-            		telefones.css('top', articleStartPositionY + '%');
+            		telefones.css('top', articleStartPositionY);
             	}
             	
             }

@@ -122,6 +122,12 @@ article:hover{
     filter: alpha(opacity=100);
 }
 
+article:active{
+	right: -3px;
+	opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 
 article div#phone-number{
 	background-image: url("../images/phone-icon.png");
