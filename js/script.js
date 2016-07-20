@@ -5,12 +5,12 @@ $(document).ready(function(){
 		timer = setInterval(forwardBanner, 5500),
 		fadeTime = 800,
 		telefones = $('article'),
-		articleStartPositionY = telefones.css('top'), // 65%
+		articleStartPositionY = 65, // 65%
 		screenHeight = $(window).height(),
-		positiontoShow = (parseInt(articleStartPositionY, 10) * screenHeight / 100) + 70; //70 = ARTICLE.HEIGHT
+		positiontoShow = (articleStartPositionY * screenHeight / 100) + 70; //70 = ARTICLE.HEIGHT
 	
-
 	init();
+  initialize();
 
 	function init() {
         window.addEventListener('scroll', function(e){
@@ -29,14 +29,16 @@ $(document).ready(function(){
             //CUIDA DO ARTICLE QUE EXIBE OS TELEFONES
             var prefooterRelativePosition = $('section#pre-footer').offset().top - distanceY;
 
+            
+
             if(positiontoShow >= prefooterRelativePosition){
             	telefones.addClass("showPhones");
             	telefones.css('top', prefooterRelativePosition - 70 + 'px');
             }else{
-            	if(telefones.hasClass("showPhones")){
+            	//if(telefones.hasClass("showPhones")){
             		telefones.removeClass("showPhones");
-            		telefones.css('top', articleStartPositionY);
-            	}
+            		telefones.css('top', articleStartPositionY + '%');
+            	//}
             	
             }
         });
@@ -80,18 +82,16 @@ $(document).ready(function(){
       	}
 	});
 
+//BANNER CODE
 	function automaticScroll(target){
-      		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      		if (target.length) {
-          		$('html,body').animate({
-              		scrollTop: target.offset().top - 80
-          		}, 1000);
-          		return false;
-      		}	
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+    		$('html,body').animate({
+        		scrollTop: target.offset().top - 80
+    		}, 1000);
+    		return false;
+		}	
 	}
-
-
-
 	function forwardBanner(){
 		if(currentDiv == divs.length-1){
 			$(divs[0]).fadeIn(fadeTime, function(){
@@ -105,7 +105,6 @@ $(document).ready(function(){
 
 		currentDiv = (currentDiv + 1) % divs.length;
 	}
-
 	function backBanner(){
 		var prevBanner = currentDiv - 1;
 	    currentDiv = prevBanner >= 0 ? prevBanner : divs.length-1;
@@ -121,4 +120,21 @@ $(document).ready(function(){
 		}
 		
 	}
+
+
+//GOOGLE MAPS CODE
+  function initialize() {
+    var myLatLng = {lat: -23.635719, lng: -46.788458};
+    var map = new google.maps.Map(document.getElementById('googleMap'), {
+      center: myLatLng,
+      scrollwheel: false,
+      zoom: 17
+    });
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Óticas Lummy',
+    });
+  } 
 });
